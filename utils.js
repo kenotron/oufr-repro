@@ -7,8 +7,9 @@ const generateData = count => {
   let data = [];
   while (index < count) {
     data.push({
-      id: { text: `idx-${index}` },
-      name: { text: `name-${index}` }
+      key: `idx-${index}`,
+      id: `idx-${index}`,
+      name: `name-${index}`
     });
 
     index++;
@@ -21,6 +22,7 @@ const items = generateData(100);
 const columns = [
   {
     name: 'Id',
+    key: 'column1',
     ariaLabel: 'Column operations for File type, Press to sort on File type',
     fieldName: 'id',
     minWidth: 100,
@@ -30,6 +32,7 @@ const columns = [
   },
   {
     name: 'Name',
+    key: 'column2',
     fieldName: 'name',
     minWidth: 100,
     maxWidth: 200,
